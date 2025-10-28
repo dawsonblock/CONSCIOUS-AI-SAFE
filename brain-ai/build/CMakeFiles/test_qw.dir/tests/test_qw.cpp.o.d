@@ -307,9 +307,11 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: \
  /usr/include/gtest/gtest-test-part.h \
  /usr/include/gtest/gtest-typed-test.h \
  /usr/include/gtest/gtest_pred_impl.h /usr/include/gtest/gtest_prod.h \
- /app/brain-ai/include/brain_ai/core/qw.hpp \
- /app/brain-ai/include/brain_ai/core/utils.hpp /usr/include/c++/12/chrono \
- /usr/include/c++/12/random /usr/include/c++/12/cmath /usr/include/math.h \
+ /app/brain-ai/include/brain_ai/core/qw_simple.hpp \
+ /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
+ /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
@@ -331,19 +333,12 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: \
  /usr/include/c++/12/tr1/poly_hermite.tcc \
  /usr/include/c++/12/tr1/poly_laguerre.tcc \
  /usr/include/c++/12/tr1/riemann_zeta.tcc \
- /usr/include/c++/12/bits/random.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/opt_random.h \
- /usr/include/c++/12/bits/random.tcc /usr/include/c++/12/numeric \
- /usr/include/c++/12/bits/stl_numeric.h \
- /usr/include/c++/12/pstl/glue_numeric_defs.h /usr/include/c++/12/complex \
- /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
- /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
- /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
  /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
+ /usr/include/c++/12/complex \
  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/omp.h \
  /usr/include/c++/12/cstring /usr/include/c++/12/algorithm \
