@@ -1,5 +1,5 @@
-#include "brain/qw.hpp"
-#include "brain/metrics.hpp"
+#include "brain_ai/core/qw.hpp"
+#include "brain_ai/metrics.hpp"
 #include <cmath>
 #include <algorithm>
 #include <iostream>
