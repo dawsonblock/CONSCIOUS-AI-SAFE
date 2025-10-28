@@ -51,11 +51,6 @@ PlanResult ImaginationEngine::plan(const std::vector<double>& initial_state,
 
     // Best trajectory
     result.best_trajectory = all_trajectories[0];
-
-    // Store top alternatives
-    size_t num_alternatives = std::min<size_t>(3, all_trajectories.size() - 1);
-    for (size_t i = 1; i <= num_alternatives; ++i) {
-    result.best_trajectory = all_trajectories[0];
     
     // Store top alternatives
     size_t num_alternatives = std::min(size_t(3), all_trajectories.size() - 1);
