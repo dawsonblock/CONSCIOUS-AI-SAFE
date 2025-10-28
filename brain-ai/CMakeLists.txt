@@ -94,6 +94,12 @@ target_link_libraries(brain_search PRIVATE brain_ai_core)
 add_executable(brain_reindex tools/reindex.cpp)
 target_link_libraries(brain_reindex PRIVATE brain_ai_core)
 
+add_executable(bench_evolution tools/bench_evolution.cpp)
+target_link_libraries(bench_evolution PRIVATE brain_ai_core)
+
+add_executable(bench_recall tools/bench_recall.cpp)
+target_link_libraries(bench_recall PRIVATE brain_ai_core)
+
 # Tests
 option(BUILD_TESTS "Build tests" ON)
 if(BUILD_TESTS)
