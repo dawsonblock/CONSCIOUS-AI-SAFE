@@ -48,7 +48,7 @@ void require_alive() {
     if (is_tripped()) {
         // We throw rather than exit immediately so that callers can
         // translate the error into their own error handling semantics.
-        throw std::runtime_error("Service disabled by kill switch");
+        throw std::runtime_error("kill switch is tripped");
     }
 }
 
