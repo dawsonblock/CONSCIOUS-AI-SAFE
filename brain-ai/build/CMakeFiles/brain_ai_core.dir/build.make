@@ -82,24 +82,10 @@ proto_gen/brain.grpc.pb.cc: proto_gen/brain.pb.cc
 proto_gen/brain.grpc.pb.h: proto_gen/brain.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate proto_gen/brain.grpc.pb.h
 
-CMakeFiles/brain_ai_core.dir/src/qw.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
-CMakeFiles/brain_ai_core.dir/src/qw.cpp.o: /app/brain-ai/src/qw.cpp
-CMakeFiles/brain_ai_core.dir/src/qw.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/brain_ai_core.dir/src/qw.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/qw.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/qw.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/qw.cpp.o -c /app/brain-ai/src/qw.cpp
-
-CMakeFiles/brain_ai_core.dir/src/qw.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/brain_ai_core.dir/src/qw.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/brain-ai/src/qw.cpp > CMakeFiles/brain_ai_core.dir/src/qw.cpp.i
-
-CMakeFiles/brain_ai_core.dir/src/qw.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brain_ai_core.dir/src/qw.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/brain-ai/src/qw.cpp -o CMakeFiles/brain_ai_core.dir/src/qw.cpp.s
-
 CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o: /app/brain-ai/src/memory_factory.cpp
 CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o -c /app/brain-ai/src/memory_factory.cpp
 
 CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.i: cmake_force
@@ -113,7 +99,7 @@ CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o: /app/brain-ai/src/memory/faiss.cpp
 CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o -c /app/brain-ai/src/memory/faiss.cpp
 
 CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.i: cmake_force
@@ -127,7 +113,7 @@ CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o: /app/brain-ai/src/memory/hnswlib.cpp
 CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o -c /app/brain-ai/src/memory/hnswlib.cpp
 
 CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.i: cmake_force
@@ -141,7 +127,7 @@ CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o: /app/brain-ai/src/graph/graph.cpp
 CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.o -c /app/brain-ai/src/graph/graph.cpp
 
 CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.i: cmake_force
@@ -155,7 +141,7 @@ CMakeFiles/brain_ai_core.dir/src/graph/graph.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o: /app/brain-ai/src/metrics.cpp
 CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o -c /app/brain-ai/src/metrics.cpp
 
 CMakeFiles/brain_ai_core.dir/src/metrics.cpp.i: cmake_force
@@ -169,7 +155,7 @@ CMakeFiles/brain_ai_core.dir/src/metrics.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/src/filters.cpp.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/src/filters.cpp.o: /app/brain-ai/src/filters.cpp
 CMakeFiles/brain_ai_core.dir/src/filters.cpp.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/brain_ai_core.dir/src/filters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/brain_ai_core.dir/src/filters.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/src/filters.cpp.o -MF CMakeFiles/brain_ai_core.dir/src/filters.cpp.o.d -o CMakeFiles/brain_ai_core.dir/src/filters.cpp.o -c /app/brain-ai/src/filters.cpp
 
 CMakeFiles/brain_ai_core.dir/src/filters.cpp.i: cmake_force
@@ -183,7 +169,7 @@ CMakeFiles/brain_ai_core.dir/src/filters.cpp.s: cmake_force
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o: proto_gen/brain.pb.cc
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o -MF CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o.d -o CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o -c /app/brain-ai/build/proto_gen/brain.pb.cc
 
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.i: cmake_force
@@ -197,7 +183,7 @@ CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.s: cmake_force
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o: CMakeFiles/brain_ai_core.dir/flags.make
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o: proto_gen/brain.grpc.pb.cc
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o: CMakeFiles/brain_ai_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o -MF CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o.d -o CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o -c /app/brain-ai/build/proto_gen/brain.grpc.pb.cc
 
 CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.i: cmake_force
@@ -210,7 +196,6 @@ CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.s: cmake_force
 
 # Object files for target brain_ai_core
 brain_ai_core_OBJECTS = \
-"CMakeFiles/brain_ai_core.dir/src/qw.cpp.o" \
 "CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o" \
 "CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o" \
 "CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o" \
@@ -223,7 +208,6 @@ brain_ai_core_OBJECTS = \
 # External object files for target brain_ai_core
 brain_ai_core_EXTERNAL_OBJECTS =
 
-libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/src/qw.cpp.o
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/src/memory/faiss.cpp.o
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/src/memory/hnswlib.cpp.o
@@ -234,7 +218,7 @@ libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/proto_gen/brain.pb.cc.o
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/proto_gen/brain.grpc.pb.cc.o
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/build.make
 libbrain_ai_core.a: CMakeFiles/brain_ai_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libbrain_ai_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libbrain_ai_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/brain_ai_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/brain_ai_core.dir/link.txt --verbose=$(VERBOSE)
 

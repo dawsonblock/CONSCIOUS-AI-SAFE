@@ -478,30 +478,6 @@ src/metrics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/src/metrics.cpp.s
 .PHONY : src/metrics.cpp.s
 
-src/qw.o: src/qw.cpp.o
-.PHONY : src/qw.o
-
-# target to build an object file
-src/qw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/src/qw.cpp.o
-.PHONY : src/qw.cpp.o
-
-src/qw.i: src/qw.cpp.i
-.PHONY : src/qw.i
-
-# target to preprocess a source file
-src/qw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/src/qw.cpp.i
-.PHONY : src/qw.cpp.i
-
-src/qw.s: src/qw.cpp.s
-.PHONY : src/qw.s
-
-# target to generate assembly for a file
-src/qw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/src/qw.cpp.s
-.PHONY : src/qw.cpp.s
-
 tests/test_graph.o: tests/test_graph.cpp.o
 .PHONY : tests/test_graph.o
 
@@ -669,9 +645,6 @@ help:
 	@echo "... src/metrics.o"
 	@echo "... src/metrics.i"
 	@echo "... src/metrics.s"
-	@echo "... src/qw.o"
-	@echo "... src/qw.i"
-	@echo "... src/qw.s"
 	@echo "... tests/test_graph.o"
 	@echo "... tests/test_graph.i"
 	@echo "... tests/test_graph.s"

@@ -93,12 +93,12 @@ clean: CMakeFiles/test_graph.dir/clean
 CMakeFiles/brain_ai_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_ai_core.dir/build.make CMakeFiles/brain_ai_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target brain_ai_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target brain_ai_core"
 .PHONY : CMakeFiles/brain_ai_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/brain_ai_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/brain_ai_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/brain_ai_core.dir/rule
@@ -119,12 +119,12 @@ CMakeFiles/brain_ai_core.dir/clean:
 CMakeFiles/brain_server.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_server.dir/build.make CMakeFiles/brain_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_server.dir/build.make CMakeFiles/brain_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=16,17 "Built target brain_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=15,16 "Built target brain_server"
 .PHONY : CMakeFiles/brain_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/brain_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/brain_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/brain_server.dir/rule
@@ -145,12 +145,12 @@ CMakeFiles/brain_server.dir/clean:
 CMakeFiles/brain_search.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_search.dir/build.make CMakeFiles/brain_search.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_search.dir/build.make CMakeFiles/brain_search.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=14,15 "Built target brain_search"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=13,14 "Built target brain_search"
 .PHONY : CMakeFiles/brain_search.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/brain_search.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/brain_search.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/brain_search.dir/rule
@@ -171,12 +171,12 @@ CMakeFiles/brain_search.dir/clean:
 CMakeFiles/brain_reindex.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_reindex.dir/build.make CMakeFiles/brain_reindex.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brain_reindex.dir/build.make CMakeFiles/brain_reindex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=12,13 "Built target brain_reindex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=11,12 "Built target brain_reindex"
 .PHONY : CMakeFiles/brain_reindex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/brain_reindex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/brain_reindex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/brain_reindex.dir/rule
@@ -197,12 +197,12 @@ CMakeFiles/brain_reindex.dir/clean:
 CMakeFiles/test_qw.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_qw.dir/build.make CMakeFiles/test_qw.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_qw.dir/build.make CMakeFiles/test_qw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=22,23 "Built target test_qw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=21,22 "Built target test_qw"
 .PHONY : CMakeFiles/test_qw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_qw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_qw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_qw.dir/rule
@@ -223,12 +223,12 @@ CMakeFiles/test_qw.dir/clean:
 CMakeFiles/test_memory.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memory.dir/build.make CMakeFiles/test_memory.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memory.dir/build.make CMakeFiles/test_memory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=20,21 "Built target test_memory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=19,20 "Built target test_memory"
 .PHONY : CMakeFiles/test_memory.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_memory.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_memory.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_memory.dir/rule
@@ -249,12 +249,12 @@ CMakeFiles/test_memory.dir/clean:
 CMakeFiles/test_graph.dir/all: CMakeFiles/brain_ai_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_graph.dir/build.make CMakeFiles/test_graph.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_graph.dir/build.make CMakeFiles/test_graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=18,19 "Built target test_graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/brain-ai/build/CMakeFiles --progress-num=17,18 "Built target test_graph"
 .PHONY : CMakeFiles/test_graph.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_graph.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /app/brain-ai/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_graph.dir/rule

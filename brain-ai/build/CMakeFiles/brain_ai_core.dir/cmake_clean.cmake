@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/brain_ai_core.dir/src/memory_factory.cpp.o.d"
   "CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o"
   "CMakeFiles/brain_ai_core.dir/src/metrics.cpp.o.d"
-  "CMakeFiles/brain_ai_core.dir/src/qw.cpp.o"
-  "CMakeFiles/brain_ai_core.dir/src/qw.cpp.o.d"
   "libbrain_ai_core.a"
   "libbrain_ai_core.pdb"
   "proto_gen/brain.grpc.pb.cc"
