@@ -1,5 +1,5 @@
 #include "brain_ai/config.hpp"
-#include "brain_ai/core/qw.hpp"
+#include "brain_ai/core/qw_simple.hpp"
 #include "brain_ai/core/memory_index.hpp"
 #include "brain_ai/core/graph.hpp"
 #include "brain_ai/metrics.hpp"
