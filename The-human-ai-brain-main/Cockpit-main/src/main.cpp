@@ -500,30 +500,7 @@ void run_server() {
         }).detach();
     }
     
-    if (listen(server_socket, g_config.max_connections) < 0) {
-        LOG_ERROR("Failed to listen");
-        close(server_socket);
-        return;
-    }
-    
-    LOG_INFO("Server listening on port " + std::to_string(g_config.port));
-    
-    while (!g_shutdown_requested) {
-        sockaddr_in client_addr{};
-        socklen_t client_len = sizeof(client_addr);
-        
-        int client_socket = accept(server_socket, (sockaddr*)&client_addr, &client_len);
-        if (client_socket < 0) {
-            if (!g_shutdown_requested) {
-                LOG_ERROR("Failed to accept connection");
-            }
-            continue;
-        }
-        
-        std::thread(handle_client, client_socket).detach();
-    }
-    
-    close(server_socket);
+    // [Removed duplicate server accept loop. The earlier implementation is used.]
 }
 
 } // namespace cockpit
