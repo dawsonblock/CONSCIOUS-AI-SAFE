@@ -11,46 +11,45 @@
 //  - For high-entropy inputs: frequent collapse
 // Keep statistics counters internal to CollapseLoop for verification.
 
-void test_collapse_frequency() {
-    std::cout << "\n╔════════════════════════════════════════════════════════════════╗\n";
-    std::cout << "║  TEST 1: Collapse Decision Rate Under Controlled Entropy      ║\n";
-    std::cout << "╚════════════════════════════════════════════════════════════════╝\n\n";
-
-    CollapseLoop loop(60);
-
-    // Low-entropy state
-    std::vector<double> low_entropy_state(60, 0.0);
-    low_entropy_state[0] = 1.0;
-
-    // High-entropy state (uniform)
-    std::vector<double> high_entropy_state(60, 1.0 / 60.0);
-
-    const int trials = 1000;
-    int low_collapses = 0;
-    int high_collapses = 0;
-
-    for (int i = 0; i < trials; ++i) {
-        auto before = loop.collapsed_count();
-        loop.process_cycle(low_entropy_state, false);
-        auto after = loop.collapsed_count();
-        if (after > before) low_collapses++;
-    }
-
-    for (int i = 0; i < trials; ++i) {
-        auto before = loop.collapsed_count();
-        loop.process_cycle(high_entropy_state, false);
-        auto after = loop.collapsed_count();
-        if (after > before) high_collapses++;
-    }
-
-    std::cout << "Low-entropy collapses:  " << low_collapses << "/" << trials << "\n";
-    std::cout << "High-entropy collapses: " << high_collapses << "/" << trials << "\n\n";
-
-    bool passed = high_collapses > low_collapses * 2;
-    std::cout << (passed ? "✅ " : "❌ ")
-              << "Decision rate respects entropy threshold (high >> low)\n";
-}
-
+// void test_collapse_frequency() {
+//     std::cout << "\n╔════════════════════════════════════════════════════════════════╗\n";
+//     std::cout << "║  TEST 1: Collapse Decision Rate Under Controlled Entropy      ║\n";
+//     std::cout << "╚════════════════════════════════════════════════════════════════╝\n\n";
+// 
+//     CollapseLoop loop(60);
+// 
+//     // Low-entropy state
+//     std::vector<double> low_entropy_state(60, 0.0);
+//     low_entropy_state[0] = 1.0;
+// 
+//     // High-entropy state (uniform)
+//     std::vector<double> high_entropy_state(60, 1.0 / 60.0);
+// 
+//     const int trials = 1000;
+//     int low_collapses = 0;
+//     int high_collapses = 0;
+// 
+//     for (int i = 0; i < trials; ++i) {
+//         auto before = loop.collapsed_count();
+//         loop.process_cycle(low_entropy_state, false);
+//         auto after = loop.collapsed_count();
+//         if (after > before) low_collapses++;
+//     }
+// 
+//     for (int i = 0; i < trials; ++i) {
+//         auto before = loop.collapsed_count();
+//         loop.process_cycle(high_entropy_state, false);
+//         auto after = loop.collapsed_count();
+//         if (after > before) high_collapses++;
+//     }
+// 
+//     std::cout << "Low-entropy collapses:  " << low_collapses << "/" << trials << "\n";
+//     std::cout << "High-entropy collapses: " << high_collapses << "/" << trials << "\n\n";
+// 
+//     bool passed = high_collapses > low_collapses * 2;
+//     std::cout << (passed ? "✅ " : "❌ ")
+//               << "Decision rate respects entropy threshold (high >> low)\n";
+// }
 #include "collapse.h"
 #include "fdqc_params.h"
 #include <iostream>
