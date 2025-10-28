@@ -10,12 +10,18 @@ namespace brain_ai {
 class ConnectionGraph::Impl {
 public:
     explicit Impl(const std::string& db_path) {
+        std::cout << "DEBUG: Opening database: " << db_path << std::endl;
         int rc = sqlite3_open(db_path.c_str(), &db_);
+        std::cout << "DEBUG: sqlite3_open returned: " << rc << std::endl;
+        
         if (rc != SQLITE_OK) {
             std::string err = sqlite3_errmsg(db_);
+            std::cout << "DEBUG: Error message: " << err << std::endl;
             sqlite3_close(db_);
             throw std::runtime_error("Failed to open graph database: " + db_path + " - " + err);
         }
+        
+        std::cout << "DEBUG: Database opened, creating schema..." << std::endl;
         
         // Create tables
         const char* schema = R"(
