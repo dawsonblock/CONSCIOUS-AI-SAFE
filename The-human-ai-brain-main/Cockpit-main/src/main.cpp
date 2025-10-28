@@ -373,19 +373,6 @@ HttpResponse route_request(const HttpRequest& req) {
         if (header_end_pos == std::string::npos) {
             throw std::runtime_error("Could not find end of headers");
         }
-            header_end_pos = raw_request.find("\r\n\r\n");
-            if (header_end_pos != std::string::npos) {
-                break;
-            }
-            // Protect against malicious clients sending endless headers
-            if (raw_request.size() > 16384) { // 16KB header limit
-                throw std::runtime_error("Headers too large");
-            }
-        }
-
-        if (header_end_pos == std::string::npos) {
-             throw std::runtime_error("Could not find end of headers");
-        }
 
         HttpRequest req = parse_http_request(raw_request.substr(0, header_end_pos + 4));
         
