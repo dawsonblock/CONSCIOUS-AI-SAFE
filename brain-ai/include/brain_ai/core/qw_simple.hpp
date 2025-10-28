@@ -48,7 +48,7 @@ public:
         Eigen::SelfAdjointEigenSolver<Matrix> solver(rho_);
         Scalar S = 0.0;
         for (int i = 0; i < dim_; ++i) {
-            Scalar lambda = solver.eigenvalues()[i].real();
+            Scalar lambda = solver.eigenvalues()[i];  // Already real
             if (lambda > 1e-12) {
                 S -= lambda * std::log(lambda);
             }
