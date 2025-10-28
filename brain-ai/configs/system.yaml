@@ -16,8 +16,8 @@ embeddings:
   normalize: true
 
 memory:
-  backend: faiss              # faiss|hnswlib|sqlite_vss|qdrant
-  path: data/ltm.faiss
+  backend: hnswlib            # hnswlib|faiss|sqlite_vss|qdrant (using HNSW for now, FAISS IVF needs training)
+  path: data/ltm.index
   topk_default: 32
   batch_upsert: 2048
   
