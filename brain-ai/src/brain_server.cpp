@@ -245,6 +245,31 @@ private:
 
 } // namespace brain_ai
 
+namespace {
+std::atomic<bool> g_shutdown{false};
+
+void signal_handler(int signal) {
+    std::cout << "\n⚠️  Received signal " << signal << ", shutting down..." << std::endl;
+    g_shutdown.store(true);
+}
+
+bool check_kill_switch(const brain_ai::SecurityConfig& config) {
+    // Check environment variable
+    const char* env_val = std::getenv(config.kill_env.c_str());
+    if (env_val && (strcmp(env_val, "true") == 0 || strcmp(env_val, "1") == 0)) {
+        return true;
+    }
+    
+    // Check file
+    std::ifstream kill_file(config.kill_file);
+    if (kill_file.good()) {
+        return true;
+    }
+    
+    return false;
+}
+}
+
 int main(int argc, char** argv) {
     std::string config_path = "configs/system.yaml";
     if (argc > 1) {
