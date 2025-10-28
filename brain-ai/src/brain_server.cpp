@@ -207,14 +207,14 @@ public:
         graph_stats->set_edges(graph_.edge_count());
         
         // Add metrics
-        (*response->mutable_metrics())[\"step_total\"] = 
-            Metrics::instance().get_counter(\"step_total\");
-        (*response->mutable_metrics())[\"recall_total\"] = 
-            Metrics::instance().get_counter(\"recall_total\");
-        (*response->mutable_metrics())[\"cache_hit_rate\"] = 
-            Metrics::instance().get_counter(\"cache_hit\") / 
-            (double)(Metrics::instance().get_counter(\"cache_hit\") + 
-                    Metrics::instance().get_counter(\"cache_miss\") + 1e-9);
+        (*response->mutable_metrics())["step_total"] = 
+            Metrics::instance().get_counter("step_total");
+        (*response->mutable_metrics())["recall_total"] = 
+            Metrics::instance().get_counter("recall_total");
+        (*response->mutable_metrics())["cache_hit_rate"] = 
+            Metrics::instance().get_counter("cache_hit") / 
+            (double)(Metrics::instance().get_counter("cache_hit") + 
+                    Metrics::instance().get_counter("cache_miss") + 1e-9);
         
         return Status::OK;
     }
