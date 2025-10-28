@@ -38,4 +38,33 @@ public:
         
         rho_ += drho;
         
-        // Ensure PSD and trace=1\n        rho_ = (rho_ + rho_.adjoint()) / 2.0;\n        Scalar tr = rho_.trace().real();\n        if (tr > 0) rho_ /= tr;\n    }\n    \n    Scalar entropy() const {\n        Eigen::SelfAdjointEigenSolver<Matrix> solver(rho_);\n        Scalar S = 0.0;\n        for (int i = 0; i < dim_; ++i) {\n            Scalar lambda = solver.eigenvalues()[i].real();\n            if (lambda > 1e-12) {\n                S -= lambda * std::log(lambda);\n            }\n        }\n        return S;\n    }\n    \n    Scalar trace() const {\n        return rho_.trace().real();\n    }\n    \n    int dimension() const { return dim_; }\n    \nprivate:\n    int dim_;\n    Matrix rho_;\n};\n\n} // namespace brain\n
+        // Ensure PSD and trace=1
+        rho_ = (rho_ + rho_.adjoint()) / 2.0;
+        Scalar tr = rho_.trace().real();
+        if (tr > 0) rho_ /= tr;
+    }
+    
+    Scalar entropy() const {
+        Eigen::SelfAdjointEigenSolver<Matrix> solver(rho_);
+        Scalar S = 0.0;
+        for (int i = 0; i < dim_; ++i) {
+            Scalar lambda = solver.eigenvalues()[i].real();
+            if (lambda > 1e-12) {
+                S -= lambda * std::log(lambda);
+            }
+        }
+        return S;
+    }
+    
+    Scalar trace() const {
+        return rho_.trace().real();
+    }
+    
+    int dimension() const { return dim_; }
+    
+private:
+    int dim_;
+    Matrix rho_;
+};
+
+} // namespace brain
