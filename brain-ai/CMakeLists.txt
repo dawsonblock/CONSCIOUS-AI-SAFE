@@ -8,9 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Performance flags
 if(CMAKE_BUILD_TYPE MATCHES "Release")
     add_compile_options(-O3 -march=native -flto -DNDEBUG)
-    if(NOT APPLE)
-        add_compile_options(-fno-exceptions -fno-rtti)
-    endif()
+    # Note: Cannot use -fno-exceptions/-fno-rtti due to FAISS/HNSWlib dependencies
     set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 endif()
 
