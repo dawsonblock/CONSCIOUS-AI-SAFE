@@ -276,13 +276,24 @@ int main(int argc, char** argv) {
         config_path = argv[1];
     }
     
-    std::cout << "🧠 Brain-AI v3.6.0 Server\\n";
-    std::cout << "Loading config: " << config_path << "\\n";
+    std::cout << "🧠 Brain-AI v3.6.0 Server\n";
+    std::cout << "Loading config: " << config_path << "\n";
+    
+    // Setup signal handlers
+    signal(SIGINT, signal_handler);
+    signal(SIGTERM, signal_handler);
     
     try {
         auto config = brain_ai::SystemConfig::load(config_path);
         config.validate();
         
+        // Check kill switch
+        if (check_kill_switch(config.security)) {
+            std::cerr << "❌ Kill switch activated - aborting startup\n";
+            return 1;
+        }
+        
+        std::cout << "Initializing Brain service...\n";
         brain_ai::BrainServiceImpl service(config);
         
         std::string server_address = "0.0.0.0:" + std::to_string(config.server.grpc_port);
@@ -292,12 +303,34 @@ int main(int argc, char** argv) {
         builder.RegisterService(&service);
         
         std::unique_ptr<Server> server(builder.BuildAndStart());
-        std::cout << "✅ Server listening on " << server_address << "\\n";
-        std::cout << "   HTTP metrics on port " << config.server.http_port << "\\n";
+        std::cout << "✅ gRPC server listening on " << server_address << "\n";
         
-        server->Wait();
+        // Start HTTP metrics server
+        brain_ai::HTTPMetricsServer http_server(config.server.http_port);
+        if (!http_server.start()) {
+            std::cerr << "⚠️  HTTP metrics server failed to start\n";
+        }
+        
+        std::cout << "\n🚀 Server ready! Press Ctrl+C to stop.\n";
+        
+        // Main loop with kill-switch checking
+        while (!g_shutdown.load()) {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            
+            // Check kill switch every second
+            if (check_kill_switch(config.security)) {
+                std::cout << "\n❌ Kill switch activated - shutting down\n";
+                break;
+            }
+        }
+        
+        std::cout << "Shutting down servers...\n";
+        server->Shutdown();
+        http_server.stop();
+        std::cout << "✅ Shutdown complete\n";
+        
     } catch (const std::exception& e) {
-        std::cerr << "❌ Error: " << e.what() << "\\n";
+        std::cerr << "❌ Error: " << e.what() << "\n";
         return 1;
     }
     
