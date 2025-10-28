@@ -9,15 +9,13 @@ namespace brain_ai {
 class FAISSIndex : public MemoryIndex {
 public:
     FAISSIndex(int dim, const std::string& config) : dim_(dim) {
-        // Create IVF+PQ index (fast)
-        quantizer_ = new faiss::IndexFlatL2(dim);
-        index_ = new faiss::IndexIVFPQ(quantizer_, dim, 4096, 32, 8);
-        index_->nprobe = 16; // Query-time search clusters
+        // Use simple Flat index for now (exact search)
+        // IVF+PQ requires training data which we don't have at startup
+        index_ = new faiss::IndexFlatL2(dim);
     }
     
     ~FAISSIndex() override {
         delete index_;
-        delete quantizer_;
     }
     
     void add(const std::vector<std::vector<float>>& vectors, 
@@ -31,12 +29,7 @@ public:
             flat.insert(flat.end(), v.begin(), v.end());
         }
         
-        // Train if not yet trained
-        if (!index_->is_trained && vectors.size() >= 4096) {
-            index_->train(vectors.size(), flat.data());
-        }
-        
-        // Add with IDs
+        // Add with IDs (Flat index doesn't need training)
         index_->add_with_ids(vectors.size(), flat.data(), ids.data());
     }
     
@@ -57,7 +50,7 @@ public:
     
     void load(const std::string& path) override {
         delete index_;
-        index_ = dynamic_cast<faiss::IndexIVFPQ*>(faiss::read_index(path.c_str()));
+        index_ = faiss::read_index(path.c_str());
         if (!index_) {
             throw std::runtime_error("Failed to load FAISS index");
         }
@@ -73,8 +66,7 @@ public:
     
 private:
     int dim_;
-    faiss::IndexFlatL2* quantizer_ = nullptr;
-    faiss::IndexIVFPQ* index_ = nullptr;
+    faiss::IndexFlatL2* index_ = nullptr;
 };
 
 std::unique_ptr<MemoryIndex> create_faiss_index(int dim, const std::string& config) {
