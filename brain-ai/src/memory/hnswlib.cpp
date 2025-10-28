@@ -44,7 +44,7 @@ public:
     }
     
     size_t size() const override {
-        return index_.getCurrentElementCount();
+        return const_cast<hnswlib::HierarchicalNSW<float>&>(index_).getCurrentElementCount();
     }
     
     int dim() const override {
