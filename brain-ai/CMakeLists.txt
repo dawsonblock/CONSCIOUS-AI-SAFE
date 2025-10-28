@@ -19,6 +19,7 @@ find_package(gRPC REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(YAMLCPP REQUIRED yaml-cpp)
+pkg_check_modules(MICROHTTPD REQUIRED libmicrohttpd)
 find_package(OpenMP)
 
 # Find FAISS
