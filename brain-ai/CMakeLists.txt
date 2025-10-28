@@ -47,7 +47,6 @@ add_custom_command(
 
 # Core library
 add_library(brain_ai_core
-    src/qw.cpp
     src/memory_factory.cpp
     src/memory/faiss.cpp
     src/memory/hnswlib.cpp
