@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package brain;
+
+service Brain {
+  rpc Step(StepReq) returns (StepResp);
+  rpc GetStats(StatsReq) returns (StatsResp);
+  rpc Embed(EmbedReq) returns (EmbedResp);
+  rpc Upsert(UpsertReq) returns (UpsertResp);
+  rpc Recall(RecallReq) returns (RecallResp);
+  rpc HealthCheck(HealthReq) returns (HealthResp);
+}
+
+message HealthReq {}
+
+message HealthResp {
+  string status = 1;
+  string version = 2;
+  int64 uptime_ms = 3;
+}
+
+message StepReq {
+  repeated double input = 1;
+  double reward = 2;
+  string context = 3;
+}
+
+message StepResp {
+  double entropy = 1;
+  int64 total_collapses = 2;
+  repeated double qw_state = 3;
+  MemoryStats memory_stats = 4;
+}
+
+message StatsReq {}
+
+message StatsResp {
+  double entropy = 1;
+  int64 total_collapses = 2;
+  int32 dimension = 3;
+  double purity = 4;
+  MemoryStats memory_stats = 5;
+  GraphStats graph_stats = 6;
+  map<string, double> metrics = 7;
+}
+
+message EmbedReq {
+  string text = 1;
+}
+
+message EmbedResp {
+  repeated float embedding = 1;
+}
+
+message UpsertReq {
+  repeated int64 ids = 1;
+  repeated EmbedVector vectors = 2;
+}
+
+message EmbedVector {
+  repeated float data = 1;
+}
+
+message UpsertResp {
+  int32 count = 1;
+}
+
+message RecallReq {
+  repeated float query = 1;
+  int32 topk = 2;
+  repeated FilterPredicate filters = 3;
+  bool use_graph = 4;
+}
+
+message FilterPredicate {
+  string key = 1;
+  string op = 2;
+  string value_text = 3;
+  double value_num = 4;
+}
+
+message RecallResp {
+  repeated int64 ids = 1;
+  repeated float distances = 2;
+}
+
+message MemoryStats {
+  int64 total_items = 1;
+  int64 hot_items = 2;
+  int64 warm_items = 3;
+  int64 cold_items = 4;
+}
+
+message GraphStats {
+  int64 nodes = 1;
+  int64 edges = 2;
+  double avg_degree = 3;
+}
