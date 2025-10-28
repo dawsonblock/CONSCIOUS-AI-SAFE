@@ -243,13 +243,13 @@ private:
 } // namespace brain_ai
 
 int main(int argc, char** argv) {
-    std::string config_path = \"configs/system.yaml\";
+    std::string config_path = "configs/system.yaml";
     if (argc > 1) {
         config_path = argv[1];
     }
     
-    std::cout << \"🧠 Brain-AI v3.6.0 Server\\n\";
-    std::cout << \"Loading config: \" << config_path << \"\\n\";
+    std::cout << "🧠 Brain-AI v3.6.0 Server\\n";
+    std::cout << "Loading config: " << config_path << "\\n";
     
     try {
         auto config = brain_ai::SystemConfig::load(config_path);
@@ -257,19 +257,19 @@ int main(int argc, char** argv) {
         
         brain_ai::BrainServiceImpl service(config);
         
-        std::string server_address = \"0.0.0.0:\" + std::to_string(config.server.grpc_port);
+        std::string server_address = "0.0.0.0:" + std::to_string(config.server.grpc_port);
         
         ServerBuilder builder;
         builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         builder.RegisterService(&service);
         
         std::unique_ptr<Server> server(builder.BuildAndStart());
-        std::cout << \"✅ Server listening on \" << server_address << \"\\n\";
-        std::cout << \"   HTTP metrics on port \" << config.server.http_port << \"\\n\";
+        std::cout << "✅ Server listening on " << server_address << "\\n";
+        std::cout << "   HTTP metrics on port " << config.server.http_port << "\\n";
         
         server->Wait();
     } catch (const std::exception& e) {
-        std::cerr << \"❌ Error: \" << e.what() << \"\\n\";
+        std::cerr << "❌ Error: " << e.what() << "\\n";
         return 1;
     }
     
