@@ -66,7 +66,12 @@ void benchmark_recall(const std::string& backend, int dim, int n_vectors, int n_
     double p50 = query_times[n_queries / 2];
     double p95 = query_times[static_cast<size_t>(n_queries * 0.95)];
     double p99 = query_times[static_cast<size_t>(n_queries * 0.99)];
-    double mean = std::accumulate(query_times.begin(), query_times.end(), 0.0) / n_queries;
+    
+    double sum = 0.0;
+    for (double t : query_times) {
+        sum += t;
+    }
+    double mean = sum / n_queries;
     
     std::cout << "\n📊 Query Performance:\n";
     std::cout << "   Mean:  " << std::fixed << std::setprecision(3) << mean << " ms\n";
