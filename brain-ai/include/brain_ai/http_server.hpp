@@ -77,7 +77,7 @@ private:
         );
         
         MHD_add_response_header(response, "Content-Type", "text/plain");
-        int ret = MHD_queue_response(connection, status_code, response);
+        MHD_Result ret = (MHD_Result)MHD_queue_response(connection, status_code, response);
         MHD_destroy_response(response);
         
         return ret;
