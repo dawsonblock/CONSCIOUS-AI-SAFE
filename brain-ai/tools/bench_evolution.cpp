@@ -35,7 +35,12 @@ BenchmarkResult benchmark_evolution(int dim, int iterations) {
     result.p50 = result.timings_ms[iterations / 2];
     result.p95 = result.timings_ms[static_cast<size_t>(iterations * 0.95)];
     result.p99 = result.timings_ms[static_cast<size_t>(iterations * 0.99)];
-    result.mean = std::accumulate(result.timings_ms.begin(), result.timings_ms.end(), 0.0) / iterations;
+    
+    double sum = 0.0;
+    for (double t : result.timings_ms) {
+        sum += t;
+    }
+    result.mean = sum / iterations;
     
     return result;
 }
