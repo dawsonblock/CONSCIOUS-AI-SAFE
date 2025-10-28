@@ -5,6 +5,7 @@
 #include "brain_ai/metrics.hpp"
 #include "brain_ai/filters.hpp"
 #include "brain_ai/cache.hpp"
+#include "brain_ai/http_server.hpp"
 #include "brain.pb.h"
 #include "brain.grpc.pb.h"
 
@@ -14,6 +15,8 @@
 #include <thread>
 #include <atomic>
 #include <fstream>
+#include <csignal>
+#include <cstdlib>
 
 using grpc::Server;
 using grpc::ServerBuilder;
