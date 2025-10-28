@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "brain_ai/core/qw.hpp"
+#include "brain_ai/core/qw_simple.hpp"
 
 TEST(QuantumWorkspaceTest, BasicInitialization) {
     brain::QuantumWorkspace qw(7);
