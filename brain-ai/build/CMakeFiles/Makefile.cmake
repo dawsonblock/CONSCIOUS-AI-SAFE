@@ -136,6 +136,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/brain_server.dir/DependInfo.cmake"
   "CMakeFiles/brain_search.dir/DependInfo.cmake"
   "CMakeFiles/brain_reindex.dir/DependInfo.cmake"
+  "CMakeFiles/bench_evolution.dir/DependInfo.cmake"
+  "CMakeFiles/bench_recall.dir/DependInfo.cmake"
   "CMakeFiles/test_qw.dir/DependInfo.cmake"
   "CMakeFiles/test_memory.dir/DependInfo.cmake"
   "CMakeFiles/test_graph.dir/DependInfo.cmake"

@@ -224,6 +224,32 @@ brain_reindex/fast:
 .PHONY : brain_reindex/fast
 
 #=============================================================================
+# Target rules for targets named bench_evolution
+
+# Build rule for target.
+bench_evolution: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_evolution
+.PHONY : bench_evolution
+
+# fast build rule for target.
+bench_evolution/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_evolution.dir/build.make CMakeFiles/bench_evolution.dir/build
+.PHONY : bench_evolution/fast
+
+#=============================================================================
+# Target rules for targets named bench_recall
+
+# Build rule for target.
+bench_recall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_recall
+.PHONY : bench_recall
+
+# fast build rule for target.
+bench_recall/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_recall.dir/build.make CMakeFiles/bench_recall.dir/build
+.PHONY : bench_recall/fast
+
+#=============================================================================
 # Target rules for targets named test_qw
 
 # Build rule for target.
@@ -550,6 +576,54 @@ tests/test_qw.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_qw.dir/build.make CMakeFiles/test_qw.dir/tests/test_qw.cpp.s
 .PHONY : tests/test_qw.cpp.s
 
+tools/bench_evolution.o: tools/bench_evolution.cpp.o
+.PHONY : tools/bench_evolution.o
+
+# target to build an object file
+tools/bench_evolution.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_evolution.dir/build.make CMakeFiles/bench_evolution.dir/tools/bench_evolution.cpp.o
+.PHONY : tools/bench_evolution.cpp.o
+
+tools/bench_evolution.i: tools/bench_evolution.cpp.i
+.PHONY : tools/bench_evolution.i
+
+# target to preprocess a source file
+tools/bench_evolution.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_evolution.dir/build.make CMakeFiles/bench_evolution.dir/tools/bench_evolution.cpp.i
+.PHONY : tools/bench_evolution.cpp.i
+
+tools/bench_evolution.s: tools/bench_evolution.cpp.s
+.PHONY : tools/bench_evolution.s
+
+# target to generate assembly for a file
+tools/bench_evolution.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_evolution.dir/build.make CMakeFiles/bench_evolution.dir/tools/bench_evolution.cpp.s
+.PHONY : tools/bench_evolution.cpp.s
+
+tools/bench_recall.o: tools/bench_recall.cpp.o
+.PHONY : tools/bench_recall.o
+
+# target to build an object file
+tools/bench_recall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_recall.dir/build.make CMakeFiles/bench_recall.dir/tools/bench_recall.cpp.o
+.PHONY : tools/bench_recall.cpp.o
+
+tools/bench_recall.i: tools/bench_recall.cpp.i
+.PHONY : tools/bench_recall.i
+
+# target to preprocess a source file
+tools/bench_recall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_recall.dir/build.make CMakeFiles/bench_recall.dir/tools/bench_recall.cpp.i
+.PHONY : tools/bench_recall.cpp.i
+
+tools/bench_recall.s: tools/bench_recall.cpp.s
+.PHONY : tools/bench_recall.s
+
+# target to generate assembly for a file
+tools/bench_recall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_recall.dir/build.make CMakeFiles/bench_recall.dir/tools/bench_recall.cpp.s
+.PHONY : tools/bench_recall.cpp.s
+
 tools/reindex.o: tools/reindex.cpp.o
 .PHONY : tools/reindex.o
 
@@ -611,6 +685,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... bench_evolution"
+	@echo "... bench_recall"
 	@echo "... brain_ai_core"
 	@echo "... brain_reindex"
 	@echo "... brain_search"
@@ -654,6 +730,12 @@ help:
 	@echo "... tests/test_qw.o"
 	@echo "... tests/test_qw.i"
 	@echo "... tests/test_qw.s"
+	@echo "... tools/bench_evolution.o"
+	@echo "... tools/bench_evolution.i"
+	@echo "... tools/bench_evolution.s"
+	@echo "... tools/bench_recall.o"
+	@echo "... tools/bench_recall.i"
+	@echo "... tools/bench_recall.s"
 	@echo "... tools/reindex.o"
 	@echo "... tools/reindex.i"
 	@echo "... tools/reindex.s"

@@ -2,6 +2,8 @@
 /app/brain-ai/build/CMakeFiles/brain_server.dir
 /app/brain-ai/build/CMakeFiles/brain_search.dir
 /app/brain-ai/build/CMakeFiles/brain_reindex.dir
+/app/brain-ai/build/CMakeFiles/bench_evolution.dir
+/app/brain-ai/build/CMakeFiles/bench_recall.dir
 /app/brain-ai/build/CMakeFiles/test_qw.dir
 /app/brain-ai/build/CMakeFiles/test_memory.dir
 /app/brain-ai/build/CMakeFiles/test_graph.dir
