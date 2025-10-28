@@ -72,6 +72,7 @@ target_link_libraries(brain_ai_core PUBLIC
     OpenSSL::Crypto
     ${FAISS_LIB}
     ${YAMLCPP_LIBRARIES}
+    ${MICROHTTPD_LIBRARIES}
     sqlite3
 )
 
