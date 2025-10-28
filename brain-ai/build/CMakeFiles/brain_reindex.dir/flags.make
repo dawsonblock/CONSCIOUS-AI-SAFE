@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/app/brain-ai/include -I/app/brain-ai/build/proto_gen -isystem /usr/include/eigen3
 
-CXX_FLAGS = -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -O3 -march=native -flto -DNDEBUG -fno-exceptions -fno-rtti -pthread -fopenmp -std=c++20
+CXX_FLAGS = -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -O3 -march=native -flto -DNDEBUG -pthread -fopenmp -std=c++20
 
