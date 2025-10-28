@@ -1,0 +1,14 @@
+/app/brain-ai/build/CMakeFiles/brain_ai_core.dir
+/app/brain-ai/build/CMakeFiles/brain_server.dir
+/app/brain-ai/build/CMakeFiles/brain_search.dir
+/app/brain-ai/build/CMakeFiles/brain_reindex.dir
+/app/brain-ai/build/CMakeFiles/test_qw.dir
+/app/brain-ai/build/CMakeFiles/test_memory.dir
+/app/brain-ai/build/CMakeFiles/test_graph.dir
+/app/brain-ai/build/CMakeFiles/test.dir
+/app/brain-ai/build/CMakeFiles/edit_cache.dir
+/app/brain-ai/build/CMakeFiles/rebuild_cache.dir
+/app/brain-ai/build/CMakeFiles/list_install_components.dir
+/app/brain-ai/build/CMakeFiles/install.dir
+/app/brain-ai/build/CMakeFiles/install/local.dir
+/app/brain-ai/build/CMakeFiles/install/strip.dir
