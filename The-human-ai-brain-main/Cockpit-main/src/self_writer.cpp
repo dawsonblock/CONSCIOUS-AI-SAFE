@@ -280,15 +280,15 @@ static void write_atomic(const std::string &path, const std::string &content) {
             std::string tmpl = (dir / (target.filename().string() + ".XXXXXX")).string();
             std::vector<char> tmpl_buf(tmpl.begin(), tmpl.end());
             tmpl_buf.push_back('\0');
-            int fd = ::mkstemp(tmpl_buf.data());
-            if (fd < 0) {
+            int retry_fd = ::mkstemp(tmpl_buf.data());
+            if (retry_fd < 0) {
                 throw std::runtime_error("Failed to create temporary file in target directory: " + dir.string());
             }
             std::string tmp_path{tmpl_buf.data()};
 
             // Set desired permissions explicitly (e.g., 0640) in case umask differs
-            if (::fchmod(fd, 0640) != 0) {
-                ::close(fd);
+            if (::fchmod(retry_fd, 0640) != 0) {
+                ::close(retry_fd);
                 ::unlink(tmp_path.c_str());
                 throw std::runtime_error("Failed to set permissions on temporary file: " + tmp_path);
             }
@@ -297,10 +297,10 @@ static void write_atomic(const std::string &path, const std::string &content) {
             const char* buf = content.data();
             size_t remaining = content.size();
             while (remaining > 0) {
-                ssize_t written = ::write(fd, buf, remaining);
+                ssize_t written = ::write(retry_fd, buf, remaining);
                 if (written < 0) {
                     if (errno == EINTR) continue;
-                    ::close(fd);
+                    ::close(retry_fd);
                     ::unlink(tmp_path.c_str());
                     throw std::runtime_error("Write to temporary file failed: " + tmp_path);
                 }
@@ -309,8 +309,8 @@ static void write_atomic(const std::string &path, const std::string &content) {
             }
 
             // Flush file contents to disk
-            if (::fsync(fd) != 0) {
-                ::close(fd);
+            if (::fsync(retry_fd) != 0) {
+                ::close(retry_fd);
                 ::unlink(tmp_path.c_str());
                 throw std::runtime_error("fsync on temporary file failed: " + tmp_path);
             }
@@ -318,13 +318,13 @@ static void write_atomic(const std::string &path, const std::string &content) {
             // Atomically replace the original file
             if (::rename(tmp_path.c_str(), target.c_str()) != 0) {
                 int err = errno;
-                ::close(fd);
+                ::close(retry_fd);
                 ::unlink(tmp_path.c_str());
                 throw std::runtime_error("Failed to rename temporary file into place: " + std::string(::strerror(err)));
             }
 
             // Close after rename to ensure no descriptor leaks
-            ::close(fd);
+            ::close(retry_fd);
 
             // Flush the directory to ensure the rename is durable
             int dfd = ::open(dir.c_str(), O_DIRECTORY | O_RDONLY);
