@@ -1,5 +1,6 @@
 #include "brain_ai/core/graph.hpp"
 #include <sqlite3.h>
+#include <iostream>
 #include <stdexcept>
 #include <algorithm>
 #include <unordered_map>
