@@ -384,10 +384,11 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
   /usr/include/gtest/gtest-typed-test.h \
   /usr/include/gtest/gtest_pred_impl.h \
   /usr/include/gtest/gtest_prod.h \
-  /app/brain-ai/include/brain_ai/core/qw.hpp \
-  /app/brain-ai/include/brain_ai/core/utils.hpp \
-  /usr/include/c++/12/chrono \
-  /usr/include/c++/12/random \
+  /app/brain-ai/include/brain_ai/core/qw_simple.hpp \
+  /usr/include/eigen3/Eigen/Dense \
+  /usr/include/eigen3/Eigen/Core \
+  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
   /usr/include/c++/12/cmath \
   /usr/include/math.h \
   /usr/include/aarch64-linux-gnu/bits/math-vector.h \
@@ -412,22 +413,12 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
   /usr/include/c++/12/tr1/poly_hermite.tcc \
   /usr/include/c++/12/tr1/poly_laguerre.tcc \
   /usr/include/c++/12/tr1/riemann_zeta.tcc \
-  /usr/include/c++/12/bits/random.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/opt_random.h \
-  /usr/include/c++/12/bits/random.tcc \
-  /usr/include/c++/12/numeric \
-  /usr/include/c++/12/bits/stl_numeric.h \
-  /usr/include/c++/12/pstl/glue_numeric_defs.h \
-  /usr/include/c++/12/complex \
-  /usr/include/eigen3/Eigen/Dense \
-  /usr/include/eigen3/Eigen/Core \
-  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
   /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
+  /usr/include/c++/12/complex \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/omp.h \
   /usr/include/c++/12/cstring \
@@ -698,16 +689,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/StlIterators.h:
 
-/usr/include/eigen3/Eigen/src/Core/Replicate.h:
-
-/usr/include/eigen3/Eigen/src/Core/Select.h:
-
-/usr/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
-
-/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
-
-/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
-
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/12/sstream:
@@ -849,14 +830,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/c++/12/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/12/bits/max_size_type.h:
-
-/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
-
-/usr/include/aarch64-linux-gnu/asm/sve_context.h:
-
-/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/12/bits/ranges_base.h:
 
@@ -1008,6 +981,14 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/asm-generic/unistd.h:
 
+/usr/include/aarch64-linux-gnu/asm/sve_context.h:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
 /usr/include/c++/12/bits/iterator_concepts.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h:
@@ -1097,6 +1078,8 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/lib/gcc/aarch64-linux-gnu/12/include/float.h:
 
 /usr/include/eigen3/Eigen/src/Core/Map.h:
+
+/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
 
 /usr/include/c++/12/limits:
 
@@ -1226,9 +1209,9 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/NoAlias.h:
 
-/usr/include/eigen3/Eigen/src/Core/Random.h:
-
 /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h:
+
+/usr/include/eigen3/Eigen/src/Core/Random.h:
 
 /usr/include/c++/12/ios:
 
@@ -1247,10 +1230,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/c++/12/bits/postypes.h:
 
 /usr/include/aarch64-linux-gnu/bits/local_lim.h:
-
-/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
-
-/usr/include/c++/12/set:
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
 
@@ -1271,10 +1250,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/c++/12/tr1/bessel_function.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
-
-/usr/include/aarch64-linux-gnu/bits/locale.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h:
 
@@ -1299,6 +1274,8 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/c++/12/bits/vector.tcc:
 
 /usr/include/c++/12/tr1/hypergeometric.tcc:
+
+/usr/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
 
 /usr/include/c++/12/bits/unique_ptr.h:
 
@@ -1382,8 +1359,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/EigenBase.h:
 
-/usr/include/aarch64-linux-gnu/c++/12/bits/opt_random.h:
-
 /usr/include/aarch64-linux-gnu/bits/endianness.h:
 
 /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
@@ -1416,7 +1391,11 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/c++/12/cxxabi.h:
 
+/usr/include/eigen3/Eigen/src/Core/Replicate.h:
+
 /usr/include/aarch64-linux-gnu/sys/stat.h:
+
+/usr/include/eigen3/Eigen/src/Core/Select.h:
 
 /usr/include/aarch64-linux-gnu/bits/stat.h:
 
@@ -1429,6 +1408,10 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/asm-generic/int-ll64.h:
 
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
+
+/usr/include/aarch64-linux-gnu/bits/locale.h:
+
+/usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
 /usr/include/linux/posix_types.h:
 
@@ -1449,8 +1432,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/regex.h:
-
-/usr/include/c++/12/numeric:
 
 /usr/include/c++/12/ratio:
 
@@ -1640,13 +1621,23 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/gtest/gtest_prod.h:
 
-/app/brain-ai/include/brain_ai/core/qw.hpp:
+/app/brain-ai/include/brain_ai/core/qw_simple.hpp:
 
-/app/brain-ai/include/brain_ai/core/utils.hpp:
+/usr/include/aarch64-linux-gnu/sys/select.h:
 
-/usr/include/c++/12/chrono:
+/usr/include/eigen3/Eigen/Dense:
 
-/usr/include/c++/12/random:
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
+/usr/include/aarch64-linux-gnu/bits/sigstack.h:
+
+/usr/include/gtest/gtest-printers.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/Macros.h:
 
 /usr/include/math.h:
 
@@ -1686,36 +1677,6 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 
 /usr/include/c++/12/tr1/poly_laguerre.tcc:
 
-/usr/include/c++/12/bits/random.h:
-
-/usr/include/c++/12/bits/random.tcc:
-
-/usr/include/c++/12/bits/stl_numeric.h:
-
-/usr/include/c++/12/pstl/glue_numeric_defs.h:
-
-/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/c++/12/complex:
-
-/usr/include/aarch64-linux-gnu/sys/select.h:
-
-/usr/include/eigen3/Eigen/Dense:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
-
-/usr/include/aarch64-linux-gnu/bits/sigstack.h:
-
-/usr/include/gtest/gtest-printers.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/Macros.h:
-
 /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:
 
 /usr/include/c++/12/tr1/gamma.tcc:
@@ -1723,6 +1684,12 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h:
+
+/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/c++/12/complex:
 
 /usr/include/c++/12/bits/ranges_algo.h:
 
@@ -1843,3 +1810,9 @@ CMakeFiles/test_qw.dir/tests/test_qw.cpp.o: /app/brain-ai/tests/test_qw.cpp \
 /usr/include/eigen3/Eigen/src/misc/RealSvd2x2.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
+
+/usr/include/c++/12/set:
+
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
