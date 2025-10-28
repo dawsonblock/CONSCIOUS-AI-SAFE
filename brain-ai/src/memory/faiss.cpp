@@ -50,9 +50,11 @@ public:
     
     void load(const std::string& path) override {
         delete index_;
-        index_ = faiss::read_index(path.c_str());
+        auto idx = faiss::read_index(path.c_str());
+        index_ = dynamic_cast<faiss::IndexFlatL2*>(idx);
         if (!index_) {
-            throw std::runtime_error("Failed to load FAISS index");
+            delete idx;  // Clean up if wrong type
+            throw std::runtime_error("Failed to load FAISS Flat index");
         }
     }
     
