@@ -1,0 +1,82 @@
+# Human-AI Brain v3.6.0 - Single Source Configuration
+
+quantum:
+  dimension: 7
+  dt: 0.01                    # 10ms timestep
+  decoherence_rate: 0.05
+  entropy_threshold: 1.9459   # ln(7)
+  max_dwell_ms: 120.0
+  collapse_rate_target_hz: 8.2
+  trace_tolerance: 1e-9
+  eigenvalue_floor: 1e-9
+
+embeddings:
+  dim: 384
+  model: sentence-transformer
+  normalize: true
+
+memory:
+  backend: faiss              # faiss|hnswlib|sqlite_vss|qdrant
+  path: data/ltm.faiss
+  topk_default: 32
+  batch_upsert: 2048
+  
+  # Sharding configuration
+  shard:
+    enable: true
+    shards: 4                 # Static sharding by id % shards
+  
+  # FAISS IVF+PQ configuration (default, fast)
+  faiss:
+    index: IVF_PQ             # IVF+PQ for speed
+    nlist: 4096               # Number of clusters
+    nprobe: 16                # Query-time clusters to search
+    pq_m: 32                  # PQ subquantizers
+  
+  # HNSW configuration (high recall option)
+  hnsw:
+    M: 32
+    ef_construct: 200
+    ef_search: 64
+
+sqlite:
+  db_path: data/brain.db
+  mmap: true
+  wal: true
+
+qdrant:
+  url: http://127.0.0.1:6333
+  collection: brain_docs
+  shard_count: 1
+
+filters:
+  enable: true
+
+cache:
+  enable: true
+  size: 100000                # LRU size
+  ttl_s: 300                  # Time to live
+
+graph:
+  enable: true
+  sim_threshold: 0.88         # Minimum similarity for edge
+  cooccur_k: 10               # Top-k for co-occurrence
+  reinforce_step: 0.05        # Edge weight increment
+  decay_daily: 0.97           # Daily decay factor
+  max_edges_per_node: 256
+  record_query_node: true
+  alpha_rerank: 0.72          # Reranking weight (α*sim + (1-α)*graph)
+  fanout: 8                   # Graph traversal fanout
+  temporal_boost_days: 14     # Recent edge boost window
+
+security:
+  prod_mode: false
+  require_signed_config: false
+  kill_env: KILL
+  kill_file: /tmp/kill
+
+server:
+  grpc_port: 50051
+  http_port: 8080
+  max_concurrency: 8
+  rate_limit_qps: 50
